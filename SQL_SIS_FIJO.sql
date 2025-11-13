@@ -1,6 +1,8 @@
 --CREATE DATABASE PRUEBADEPORTE
 --GO
 
+--USE master
+
 --USE PRUEBADEPORTE
 --GO
 
@@ -33,7 +35,7 @@ GO
 CREATE TABLE tbUsuario(
 	IDUsuario INT IDENTITY(1,1) PRIMARY KEY,
 	IDPersona INT NOT NULL, --CLAVE FORANEA PARA LA TABLA tbPersona
-	NombreUsuario VARCHAR (250) NOT NULL,
+	NombreUsuario VARCHAR (50) NOT NULL,
 	Clave VARCHAR (25) NOT NULL,
 	Estado BIT NOT NULL DEFAULT 1,
 
@@ -79,7 +81,7 @@ CREATE TABLE tbInvitacionEquipo(
 	idInvitacion INT IDENTITY(1,1) PRIMARY KEY,
 	idEquipo INT NOT NULL,
 	idUsuarioInvitado INT NOT NULL,
-	idUsuarioEmisor INT NOT NULL,  -- El que envía la invitación (normalmente el creador)
+	idUsuarioEmisor INT NOT NULL,  -- EL QUE ENVIA LA INVITACION (CREADOR DE EQUIPO)
 	FechaInvitacion DATETIME DEFAULT GETDATE(),
 	EstadoInvitacion VARCHAR(20) DEFAULT 'Pendiente' 
 		-- 'Pendiente', 'Aceptada', 'Rechazada'
@@ -90,6 +92,7 @@ CREATE TABLE tbInvitacionEquipo(
 );
 GO
 
+SELECT * FROM tbInvitacionEquipo
 
 
 -- INSERTAR REGISTROS A LA TABLA tbTipoDocumento
@@ -105,7 +108,3 @@ GO
 SELECT * FROM tbUsuario
 SELECT * FROM tbPersona
 SELECT * FROM tbEquipo
-
---drop table tbUsuario
---drop table tbPersona
---drop table tbTipoDocumento

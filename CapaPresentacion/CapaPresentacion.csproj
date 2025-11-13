@@ -64,6 +64,12 @@
     <Compile Include="frmInicioSesion.Designer.cs">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmInvitarUsuarioEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInvitarUsuarioEquipo.Designer.cs">
+      <DependentUpon>frmInvitarUsuarioEquipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPaginaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInvitarUsuarioEquipo.resx">
+      <DependentUpon>frmInvitarUsuarioEquipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPaginaPrincipal.resx">
       <DependentUpon>frmPaginaPrincipal.cs</DependentUpon>

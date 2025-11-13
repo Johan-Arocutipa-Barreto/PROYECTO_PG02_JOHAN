@@ -32,6 +32,7 @@ namespace CapaPresentacion
             /*
              * NO PERMITIR DUPLICIDAD DE EQUIPO
              * EN VES DE SALIR CONO ESPACIO VACIO EN LA TABLA DEBE SALIR COMO NULL
+             * USAR EL CORREO DE LA TABLA PERSONA PARA LOS CONTACTOS DEL USUSARIO CREADOR
              */
 
             try

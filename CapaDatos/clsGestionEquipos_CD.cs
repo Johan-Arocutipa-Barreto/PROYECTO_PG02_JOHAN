@@ -55,7 +55,11 @@ namespace CapaDatos
 
                     using (SqlDataReader reader = cmdListar.ExecuteReader())
                     {
-                        tbEquipos.Load(reader);
+                        //VERIFICA SI LA TABLA TIENE COLUMNAS
+                        if (reader.HasRows)
+                        {
+                            tbEquipos.Load(reader);
+                        }
                     }
                 }
             }

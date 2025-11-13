@@ -25,6 +25,7 @@ namespace CapaPresentacion
             string correo = txtCorreo.Text;
             string clave = txtContraseña.Text;
 
+            //VERIFICAR QUE NO SE INGRESEN
             if (string.IsNullOrEmpty(txtCorreo.Text) || string.IsNullOrEmpty(txtContraseña.Text))
             {
                 MessageBox.Show("No puede dejar espacios en blanco");
@@ -33,8 +34,8 @@ namespace CapaPresentacion
 
             try
             {
-                bool ValidarCredencial = ObjCredenciales.mtdCValidarCredencialesCN(correo, clave);
-                var GuardarUsuario = ObjCredenciales.mtdObtenerUsuarioCN(correo, clave);
+                bool ValidarCredencial = ObjCredenciales.mtdCValidarCredencialesCN(correo, clave); //VERIFICAR SI LAS CREDENCIALES SON CORRECTAS
+                var GuardarUsuario = ObjCredenciales.mtdObtenerUsuarioCN(correo, clave); //GUARDAR LA INFORMACION DEL USUARIO PARA EL USO DEL SISTEMA
 
                 if (ValidarCredencial)
                 {
@@ -44,7 +45,6 @@ namespace CapaPresentacion
                     clsSesionUsuario_CN.idUsuario = GuardarUsuario.idUsuario;
                     clsSesionUsuario_CN.NombreUsuario = GuardarUsuario.nombreUsuario;
 
-                    //LINEA USADA PARA PRUEBAS (BORRAR AL FINALIZAR)
                     frmPaginaPrincipal crearEquipo = new frmPaginaPrincipal();
                     crearEquipo.ShowDialog();
 
@@ -53,11 +53,6 @@ namespace CapaPresentacion
                 {
                     MessageBox.Show("Credenciales Incorrectas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-            catch (FormatException)
-            {
-                // CAPTURAR LA EXCEPCION LANZADA POR EL INCORRECTO FORMATO DEL CORREO
-                MessageBox.Show("Correo no válido o sin formato correcto", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {
@@ -69,6 +64,11 @@ namespace CapaPresentacion
         {
             frmCrearCuenta CrearCuenta = new frmCrearCuenta();
             CrearCuenta.ShowDialog();
+        }
+
+        private void frmInicioSesion_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -49,6 +49,7 @@
             // txtCorreo
             // 
             this.txtCorreo.Location = new System.Drawing.Point(143, 77);
+            this.txtCorreo.MaxLength = 50;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(100, 20);
             this.txtCorreo.TabIndex = 1;
@@ -58,9 +59,9 @@
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Location = new System.Drawing.Point(28, 83);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(38, 13);
+            this.lblCorreo.Size = new System.Drawing.Size(98, 13);
             this.lblCorreo.TabIndex = 2;
-            this.lblCorreo.Text = "Correo";
+            this.lblCorreo.Text = "Nombre de Usuario";
             // 
             // label1
             // 
@@ -74,8 +75,9 @@
             // txtContraseña
             // 
             this.txtContraseña.Location = new System.Drawing.Point(143, 103);
-            this.txtContraseña.MaxLength = 10;
+            this.txtContraseña.MaxLength = 25;
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(100, 20);
             this.txtContraseña.TabIndex = 3;
             // 
@@ -103,7 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(295, 229);
+            this.ClientSize = new System.Drawing.Size(295, 192);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.label1);
@@ -113,6 +115,7 @@
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmInicioSesion";
             this.Text = "Inicio de Sesion";
+            this.Load += new System.EventHandler(this.frmInicioSesion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

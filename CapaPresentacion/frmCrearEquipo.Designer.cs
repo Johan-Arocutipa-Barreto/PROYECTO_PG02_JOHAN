@@ -89,7 +89,7 @@
             // 
             // btnSubirFoto
             // 
-            this.btnSubirFoto.Location = new System.Drawing.Point(247, 271);
+            this.btnSubirFoto.Location = new System.Drawing.Point(243, 330);
             this.btnSubirFoto.Name = "btnSubirFoto";
             this.btnSubirFoto.Size = new System.Drawing.Size(75, 23);
             this.btnSubirFoto.TabIndex = 71;
@@ -98,16 +98,16 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(23, 271);
+            this.pictureBox1.Location = new System.Drawing.Point(19, 330);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(177, 150);
+            this.pictureBox1.Size = new System.Drawing.Size(64, 59);
             this.pictureBox1.TabIndex = 70;
             this.pictureBox1.TabStop = false;
             // 
             // lblLogo
             // 
             this.lblLogo.AutoSize = true;
-            this.lblLogo.Location = new System.Drawing.Point(20, 255);
+            this.lblLogo.Location = new System.Drawing.Point(16, 314);
             this.lblLogo.Name = "lblLogo";
             this.lblLogo.Size = new System.Drawing.Size(31, 13);
             this.lblLogo.TabIndex = 69;

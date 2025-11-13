@@ -26,5 +26,30 @@ namespace CapaPresentacion
         {
             dgvEquiposUsuario.DataSource = ObjGestionEquipos.mtdListarEquiposPorUsuarioCD(IDCreador);
         }
+
+        private void btnCrearEquipo_Click(object sender, EventArgs e)
+        {
+            frmCrearEquipo equipo = new frmCrearEquipo();
+            equipo.ShowDialog();
+        }
+
+        private void btnInvitar_Click(object sender, EventArgs e)
+        {
+            frmInvitarUsuarioEquipo frmInvitar = new frmInvitarUsuarioEquipo();
+            frmInvitar.ShowDialog();
+            
+            MessageBox.Show("El id es: " + txtIDEquipo.Text);
+        }
+
+        private void dgvEquiposUsuario_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvEquiposUsuario.Rows)
+            {
+                if (row.Index == e.RowIndex)
+                {
+                   txtIDEquipo.Text = row.Cells["IDEquipo"].Value.ToString();
+                }
+            }
+        }
     }
 }

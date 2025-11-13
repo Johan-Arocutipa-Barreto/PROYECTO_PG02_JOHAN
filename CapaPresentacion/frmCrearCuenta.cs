@@ -44,9 +44,9 @@ namespace CapaPresentacion
             
 
             //INFORMACION PERSONAL
-            string Nombres = txtNombres.Text;
-            string ApellidoPaterno = txtPaterno.Text;
-            string ApellidoMaterno = txtMaterno.Text;
+            string Nombres = txtNombres.Text.ToUpper();
+            string ApellidoPaterno = txtPaterno.Text.ToUpper();
+            string ApellidoMaterno = txtMaterno.Text.ToUpper();
             string Documento = txtDocumento.Text;
             string Genero = cmbGenero.Text;
 
@@ -58,6 +58,10 @@ namespace CapaPresentacion
 
             try
             {
+                //NO DEBE PERMITIR QUE OTRO USUARIO SE CREE UNA CUENTA CON UN CORREO YA REGISTRADO
+                /*
+                 * DAR A CONOCER QUE EL CORREO YA ESTA EN USO
+                 */
 
                 ObjCrearCuenta.mtdCrearCuentaCN(Nombres,
                                                 ApellidoPaterno,
