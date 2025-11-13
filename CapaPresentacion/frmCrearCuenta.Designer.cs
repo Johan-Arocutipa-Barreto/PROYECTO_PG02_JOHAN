@@ -35,6 +35,8 @@
             this.txtNomUsuario = new System.Windows.Forms.TextBox();
             this.lblNomUsuario = new System.Windows.Forms.Label();
             this.gpbInfoPersonal = new System.Windows.Forms.GroupBox();
+            this.cmbGenero = new System.Windows.Forms.ComboBox();
+            this.lblGenero = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.txtDocumento = new System.Windows.Forms.TextBox();
@@ -51,8 +53,7 @@
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.lblNombres = new System.Windows.Forms.Label();
             this.btnCrear = new System.Windows.Forms.Button();
-            this.lblGenero = new System.Windows.Forms.Label();
-            this.cmbGenero = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.gpbInfoCuenta.SuspendLayout();
             this.gpbInfoPersonal.SuspendLayout();
             this.SuspendLayout();
@@ -77,9 +78,10 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Location = new System.Drawing.Point(245, 25);
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(258, 24);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(91, 13);
+            this.lblTitulo.Size = new System.Drawing.Size(242, 31);
             this.lblTitulo.TabIndex = 5;
             this.lblTitulo.Text = "CREAR CUENTA";
             // 
@@ -89,7 +91,7 @@
             this.gpbInfoCuenta.Controls.Add(this.lblNomUsuario);
             this.gpbInfoCuenta.Controls.Add(this.txtContraseña);
             this.gpbInfoCuenta.Controls.Add(this.label1);
-            this.gpbInfoCuenta.Location = new System.Drawing.Point(411, 93);
+            this.gpbInfoCuenta.Location = new System.Drawing.Point(420, 82);
             this.gpbInfoCuenta.Name = "gpbInfoCuenta";
             this.gpbInfoCuenta.Size = new System.Drawing.Size(253, 156);
             this.gpbInfoCuenta.TabIndex = 10;
@@ -137,6 +139,26 @@
             this.gpbInfoPersonal.TabIndex = 11;
             this.gpbInfoPersonal.TabStop = false;
             this.gpbInfoPersonal.Text = "Informacion Personal";
+            // 
+            // cmbGenero
+            // 
+            this.cmbGenero.FormattingEnabled = true;
+            this.cmbGenero.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.cmbGenero.Location = new System.Drawing.Point(134, 299);
+            this.cmbGenero.Name = "cmbGenero";
+            this.cmbGenero.Size = new System.Drawing.Size(194, 21);
+            this.cmbGenero.TabIndex = 28;
+            // 
+            // lblGenero
+            // 
+            this.lblGenero.AutoSize = true;
+            this.lblGenero.Location = new System.Drawing.Point(79, 299);
+            this.lblGenero.Name = "lblGenero";
+            this.lblGenero.Size = new System.Drawing.Size(42, 13);
+            this.lblGenero.TabIndex = 27;
+            this.lblGenero.Text = "Genero";
             // 
             // txtCorreo
             // 
@@ -260,39 +282,32 @@
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(589, 264);
+            this.btnCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnCrear.Location = new System.Drawing.Point(517, 307);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(75, 23);
             this.btnCrear.TabIndex = 12;
             this.btnCrear.Text = "Crear";
-            this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.UseVisualStyleBackColor = false;
             this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
-            // lblGenero
+            // button1
             // 
-            this.lblGenero.AutoSize = true;
-            this.lblGenero.Location = new System.Drawing.Point(79, 299);
-            this.lblGenero.Name = "lblGenero";
-            this.lblGenero.Size = new System.Drawing.Size(42, 13);
-            this.lblGenero.TabIndex = 27;
-            this.lblGenero.Text = "Genero";
-            // 
-            // cmbGenero
-            // 
-            this.cmbGenero.FormattingEnabled = true;
-            this.cmbGenero.Items.AddRange(new object[] {
-            "M",
-            "F"});
-            this.cmbGenero.Location = new System.Drawing.Point(134, 299);
-            this.cmbGenero.Name = "cmbGenero";
-            this.cmbGenero.Size = new System.Drawing.Size(194, 21);
-            this.cmbGenero.TabIndex = 28;
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(598, 307);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Cancelar";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // frmCrearCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(937, 542);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.gpbInfoPersonal);
             this.Controls.Add(this.gpbInfoCuenta);
@@ -336,5 +351,6 @@
         private System.Windows.Forms.Label lblTipoDocumento;
         private System.Windows.Forms.ComboBox cmbGenero;
         private System.Windows.Forms.Label lblGenero;
+        private System.Windows.Forms.Button button1;
     }
 }
