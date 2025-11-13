@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,18 @@ namespace CapaPresentacion
 {
     public partial class frmPaginaPrincipal : Form
     {
+        private clsGestionEquipos_CN ObjGestionEquipos = new clsGestionEquipos_CN();
+
+        int IDCreador = clsSesionUsuario_CN.idUsuario;
+
         public frmPaginaPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void frmPaginaPrincipal_Load(object sender, EventArgs e)
+        {
+            dgvEquiposUsuario.DataSource = ObjGestionEquipos.mtdListarEquiposPorUsuarioCD(IDCreador);
         }
     }
 }

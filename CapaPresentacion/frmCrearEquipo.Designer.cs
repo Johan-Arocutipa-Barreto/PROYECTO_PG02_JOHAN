@@ -80,7 +80,7 @@
             this.dpbDatosEquipo.Controls.Add(this.txtCreador);
             this.dpbDatosEquipo.Controls.Add(this.lblNombreEquipo);
             this.dpbDatosEquipo.Controls.Add(this.txtNombreEquipo);
-            this.dpbDatosEquipo.Location = new System.Drawing.Point(50, 110);
+            this.dpbDatosEquipo.Location = new System.Drawing.Point(33, 67);
             this.dpbDatosEquipo.Name = "dpbDatosEquipo";
             this.dpbDatosEquipo.Size = new System.Drawing.Size(407, 512);
             this.dpbDatosEquipo.TabIndex = 63;
@@ -149,7 +149,7 @@
             // 
             // btnCrearEquipo
             // 
-            this.btnCrearEquipo.Location = new System.Drawing.Point(382, 628);
+            this.btnCrearEquipo.Location = new System.Drawing.Point(365, 585);
             this.btnCrearEquipo.Name = "btnCrearEquipo";
             this.btnCrearEquipo.Size = new System.Drawing.Size(75, 23);
             this.btnCrearEquipo.TabIndex = 64;
@@ -161,7 +161,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 702);
+            this.ClientSize = new System.Drawing.Size(493, 643);
             this.Controls.Add(this.btnCrearEquipo);
             this.Controls.Add(this.dpbDatosEquipo);
             this.Controls.Add(this.lblTitulo);

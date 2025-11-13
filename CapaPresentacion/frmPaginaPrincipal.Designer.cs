@@ -30,7 +30,11 @@
         {
             this.btnCrearEquipo = new System.Windows.Forms.Button();
             this.gpbAcciones = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvEquiposUsuario = new System.Windows.Forms.DataGridView();
             this.gpbAcciones.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEquiposUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCrearEquipo
@@ -52,15 +56,40 @@
             this.gpbAcciones.TabStop = false;
             this.gpbAcciones.Text = "Acciones";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgvEquiposUsuario);
+            this.groupBox1.Location = new System.Drawing.Point(232, 35);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(479, 217);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Lista de Equipos Creados";
+            // 
+            // dgvEquiposUsuario
+            // 
+            this.dgvEquiposUsuario.AllowUserToAddRows = false;
+            this.dgvEquiposUsuario.AllowUserToDeleteRows = false;
+            this.dgvEquiposUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEquiposUsuario.Location = new System.Drawing.Point(23, 32);
+            this.dgvEquiposUsuario.Name = "dgvEquiposUsuario";
+            this.dgvEquiposUsuario.ReadOnly = true;
+            this.dgvEquiposUsuario.Size = new System.Drawing.Size(437, 150);
+            this.dgvEquiposUsuario.TabIndex = 0;
+            // 
             // frmPaginaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gpbAcciones);
             this.Name = "frmPaginaPrincipal";
             this.Text = "frmPaginaPrincipal";
+            this.Load += new System.EventHandler(this.frmPaginaPrincipal_Load);
             this.gpbAcciones.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEquiposUsuario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -69,5 +98,7 @@
 
         private System.Windows.Forms.Button btnCrearEquipo;
         private System.Windows.Forms.GroupBox gpbAcciones;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dgvEquiposUsuario;
     }
 }

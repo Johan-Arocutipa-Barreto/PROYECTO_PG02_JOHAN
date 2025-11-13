@@ -45,7 +45,7 @@ namespace CapaPresentacion
                     clsSesionUsuario_CN.NombreUsuario = GuardarUsuario.nombreUsuario;
 
                     //LINEA USADA PARA PRUEBAS (BORRAR AL FINALIZAR)
-                    frmCrearEquipo crearEquipo = new frmCrearEquipo();
+                    frmPaginaPrincipal crearEquipo = new frmPaginaPrincipal();
                     crearEquipo.ShowDialog();
 
                 }
